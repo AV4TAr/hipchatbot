@@ -3,7 +3,7 @@
 require(dirname(__FILE__) . '/class.HipChatBot.php');
 
 // give it 1) your api token and 2) the room_id to monitor
-$hcb = new HipChatBot('92b4cb825cef189def9a7b91b55a79','16110');
+$hcb = new HipChatBot('6c6adf46e1e3cbe9931d1c5af74be7','464562');
 
 /* 
 register some simple bots:  
@@ -18,7 +18,7 @@ register some simple bots:
 //  example typing ":bot weather" will return weather info from yahoo api 
 $hcb->register_name_bot('bot', 'Bot', function($args) {
 
-	$weather_url = 'http://query.yahooapis.com/v1/public/yql?format=json&q=select%20*%20from%20weather.forecast%20where%20location=94111';
+	$weather_url = 'http://query.yahooapis.com/v1/public/yql?format=json&q=select%20*%20from%20weather.forecast%20where%20woeid=468052%20%20and%20u="c"';
 	$emoticons = array('(hipchat)','(beer)','(coffee)','(poo)','(heart)',
 					   '(itsatrap)','(lolwut)','(sadpanda)','(bumble)',
 					   '(cornelius)','(thumbsup)','(thumbsdown)',
